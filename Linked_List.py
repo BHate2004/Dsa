@@ -133,15 +133,29 @@ class Linked_list:
         self.reverse(node.next)
         print(node.value,end=',')
 
+    def rev_ll(self,node=None,count=0):
+        if node==None:
+            node=self.head
+
+        if node.next==None:
+            self.head=node
+            return self.head
+
+        a=self.rev_ll(node.next,count=count+1)
+        if count!=0:
+            a.next=node
+            return node
+        a.next=node
+        none_node=a.next
+        none_node.next=None
+        
 
 l=Linked_list()
-l.append_(10)
-l.append_(20)
-l.head_insert(52)
-l.append_(50)
-l.append_(500)
+l.append_(1)
+l.append_(2)
+l.append_(3)
+l.append_(4)
+l.rev_ll()
 print(l)
-print('______')
-l.reverse(l.head)
 
-1--2--3--4--5
+
