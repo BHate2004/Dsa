@@ -23,4 +23,4 @@ def sort(left,right,num=[],i=0,j=0):
     return num
     
 
-print(sort([1,2,3,6,],[0,1,1,2,4,5]))
+print(sort([1,2,3,6,],[0,1,1,2,4,7,9]))
