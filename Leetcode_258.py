@@ -1,4 +1,4 @@
-num=[9, 6, 4, 2, 3, 5, 7, 0, 1]
+num=[9, 6, 4, 2, 3, 5, 7,10,11, 0, 1,12,13,14]
 def find_missing(num,count=0):
     if count==len(num):
         return count
