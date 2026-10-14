@@ -1,5 +1,4 @@
-
-num= [1,102,99, 10, 98, 2,100, 5, 3,0]
+num= [1,102,99, 10, 98, 2,100, 5, 3,0,101,103]
 def all_num(num):
    nums=set()
    for i in num:
@@ -19,7 +18,7 @@ def consecutive_length(num):
             current+=1
          if count>max_lenght:
             max_lenght=count
-            count=0
+
    return max_lenght
 print(consecutive_length(num))
             
