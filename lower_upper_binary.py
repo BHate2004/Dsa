@@ -1,4 +1,4 @@
-nums=[1,12,12,14,15]
+nums=[1,12,14,15]
 def find_lower_bound(nums,target,low=0,high=len(nums)-1,lower_index=-1,mid=None):
     
 
@@ -11,5 +11,5 @@ def find_lower_bound(nums,target,low=0,high=len(nums)-1,lower_index=-1,mid=None)
     elif nums[mid]<target:
         return find_lower_bound(nums,target,low=mid+1,high=high,lower_index=lower_index,mid=mid)
 
-print(find_lower_bound(nums,20))
+print(find_lower_bound(nums,16))
 
