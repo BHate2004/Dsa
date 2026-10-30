@@ -24,7 +24,7 @@ def upper_no(nums,target,low=0,high=len(nums)-1,mid=None,upper=-1):
 def find_occur(nums,target):  
     low=lower_no(nums,target)
     up=upper_no(nums,target)
-    if nums[low]!=target or low==-1 or nums[up]!=target or up==-1:
+    if low==-1 or nums[low]!=target:
         return f'No occurance of {target}'
     return f'target:{target} occurance-->{up+1-low}'
 print(find_occur(nums,5))
