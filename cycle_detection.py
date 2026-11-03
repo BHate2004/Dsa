@@ -27,7 +27,7 @@ if __name__ == '__main__':
     n7.next = n8
     n8.next = n9
 
-    n9.next = n3
+    # n9.next = n3
 
 # print(ll)
 def detect_cycle(ll):
@@ -41,3 +41,14 @@ def detect_cycle(ll):
     return False
 print(detect_cycle(ll))
 
+# better approach
+def detect_cycle_best(ll):
+    s=ll.head
+    f=ll.head
+    while f is not None and f.next is not None:
+        s=s.next
+        f=f.next.next
+        if f==s:
+            return True
+    return False
+print(detect_cycle(ll))
