@@ -69,6 +69,7 @@ class double_linklist:
         self.head=next_head
         self.head.prev=None
         self.n-=1
+
     def delete_tail(self):
         if self.tail==None:
             return 'Empty'
@@ -112,27 +113,53 @@ class double_linklist:
         curr.next=next
         curr.prev=None
             
-        
-
+    def _del_val(self,value):
+        if self.head==None:
+            return 'empty'
+        current=self.head
+        while current!=None:
+            if current==self.head and current.value==value:
+                self.delete_head()
+                current=current.next
+                continue
+            if current.value==value:
+                total=0
+                prev_node=current.prev
+                while current!=None and current.value==value:
+                    total+=1
+                    current=current.next
+                self.n-=total
+                if self.n==0:
+                    self.head=None
+                    self.tail=None
+                    return 'empty'
+                if current==None:
+                    prev_node.next=None
+                    self.tail=prev_node
+                else:
+                    prev_node.next=current
+                    current.prev=prev_node
+                    current=current.next
                 
-
+            else:
+                current=current.next
             
-        
-
-
-            
-
-
 
 
 ll = double_linklist()
 
-ll.append(2)
-ll.append(2)
-ll.append(5)
+
 ll.append(0)
+ll.append(2)
+ll.append(3)
+ll.append(2)
+ll.append(4)
+ll._insert(2)
 
 
+print(ll.n)
 ll._del_val(2)
+print(ll)
+ll._reverse_()
 print(ll)
 
