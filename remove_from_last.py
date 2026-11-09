@@ -24,7 +24,7 @@ def _remove_from_last(ll,index):
         head=ll.head.next
         ll.head=head
         return ll 
-    while count!=pos-1 and current!=None:
+    while count!=pos-2 and current!=None:
         count+=1
         current=current.next
     current.next=current.next.next
