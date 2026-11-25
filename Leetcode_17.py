@@ -8,7 +8,7 @@ letters = {
     "8": ["t", "u", "v"],
     "9": ["w", "x", "y", "z"]
 }
-nums='46'
+nums='55'
  
 result=[]
 def lette_combination(nums,index,subsets=[]):
